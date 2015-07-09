@@ -18,7 +18,7 @@ namespace ReBot
 		public override bool OutOfCombat()
 		{
 			//check for gcd
-			if (	HasBlobalCooldown() == true	)
+			if (	HasGlobalCooldown() == true	)
 				return true;
 			
 			//check if falling
@@ -95,10 +95,10 @@ namespace ReBot
 				return;
 				
 			if (	Cast("Frostbolt",
-					() => HasSpell("Frostbolt") == true )
+					() => HasSpell("Frostbolt") ) == true )
 				return;
 			if (	Cast("Frostfire Bolt",
-					() => HasSpell("Frostfire Bolt") == true )
+					() => HasSpell("Frostfire Bolt") ) == true )
 				return;
 			
 			//end of Combat
@@ -150,7 +150,7 @@ namespace ReBot
 		
 		private bool Interrupt()
 		{
-			if (	Target.IsInCombatRangeAndLoS() == false 
+			if (	Target.IsInCombatRangeAndLoS == false 
 					|| Target.RemainingCastTime > 100 )
 				return false;
 			
@@ -162,9 +162,6 @@ namespace ReBot
 					() => HasSpell("Frostjaw") == true,
 					1500 ) == true )
 				return true;		
-		
-			var targs = Adds;
-			targets.Add(Target);
 	
 			//end of Interrupt
 			return false;
