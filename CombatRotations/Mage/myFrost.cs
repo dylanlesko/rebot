@@ -12,6 +12,20 @@ namespace ReBot
 	[Rotation("My Frost", "Savataged", "v1.0", WoWClass.Mage, Specialization.MageFrost, 40)]
 	public class MyFrost : CombatRotation
 	{
+	
+		public MyFrost()
+        {
+            OverrideCombatModus = CombatModus.Fighter;
+            OverrideCombatRole = CombatRole.DPS;
+			
+			GroupBuffs = new string[]
+			{
+				"Arcane Brilliance",
+				"Dalaran Brilliance",
+				"Conjure Refreshment Table"
+			};
+        }		
+		
 		[JsonProperty("Use Time Warp")]
 		public bool UseTimeWarp = true;
 
