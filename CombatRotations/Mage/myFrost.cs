@@ -55,7 +55,7 @@ namespace ReBot
 		public override void Combat()
 		{
 			//check for gcd
-			if (	HasBlobalCooldown() == true	)
+			if (	HasGlobalCooldown() == true	)
 				return;
 			
 			//check if falling
