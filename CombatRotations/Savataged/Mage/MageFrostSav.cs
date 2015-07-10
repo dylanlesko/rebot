@@ -17,6 +17,11 @@ namespace ReBot
 			OverrideCombatModus = CombatModus.Fighter;
 			OverrideCombatRole = CombatRole.DPS;
 			
+			PullSpells = new string[]
+			{
+				"Frostbolt"
+			};			
+			
 			GroupBuffs = new string[]
 			{
 				"Arcane Brilliance",
