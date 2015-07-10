@@ -24,7 +24,6 @@ namespace ReBot
 				"Conjure Refreshment Table"
 			};
 		}	
-		
 		[JsonProperty("Use Time Warp")]
 		public bool UseTimeWarp = true;
 
@@ -223,9 +222,10 @@ namespace ReBot
 				if (	CastSelf("Mirror Image", 
 						() => HasSpell("Mirror Image") ) == true )
 				return true;
-			if (	Target.HasAura("Freeze") == true )
+			if (	Target.HasAura("Freeze") == true 
+					&& HasSpell("Presence of Mind") == true )
 				if (	Cast("Frostbolt",
-					() => HasAura("Presence of Mind")) == true) 
+					() => HasAura("Presence of Mind") ) == true) 
 				return true;
 				
 			if (	CastOnTerrain("Freeze",
@@ -246,12 +246,15 @@ namespace ReBot
 			if (	Cast("Ice Lance", 
 					() => Target.HasAura("Freeze") ) == true )
 				return true;
-			if (	CastSelf("Presence of Mind",
-					() => Target.HealthFraction < 0.95 ) == true )
-				return true;				
-			if (	Cast("Frostbolt",
-					() => HasAura("Presence of Mind")) == true) 
-				return true;
+			if (	HasSpell("Presence of Mind") == true )
+			{
+				if (	CastSelf("Presence of Mind",
+						() => Target.HealthFraction < 0.95 ) == true )
+					return true;				
+				if (	Cast("Frostbolt",
+						() => HasAura("Presence of Mind")) == true) 
+					return true;
+			}
 			if (	Cast("Deep Freeze",
 					() => Target.HasAura("Freeze") 
 					|| Target.HasAura("Frost Nova")) == true ) 
