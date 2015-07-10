@@ -7,7 +7,8 @@ Rebot
 	Personal profiles and scripts for rebot.
 
 ###Combat Routines
-	The goal for these profiles are general purpose. They will be as well rounded as possible, but with a focus on questing.
+	The goal for these profiles are general purpose. 
+	They will be as well rounded as possible, but with a focus on questing.
 	
 |     Class    |  Core Status | Spec 1 | Spec 2 | Spec 3 |
 |:------------:|:------------:|:------:|:------:|:------:|
