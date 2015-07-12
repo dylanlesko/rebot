@@ -111,7 +111,7 @@ namespace ReBot
 		{
 		
 			if ( Me.HasAlivePet == true )
-				return true;
+				return false;
 				
 			string spell = null;
 
@@ -158,6 +158,8 @@ namespace ReBot
 				return true;
 			
 			if (	PetManagement() == true )
+				return true;
+			if (	Buffs() == true )
 				return true;
 			
 			if (	HasSpell("Create Helathstone" ) == true )
