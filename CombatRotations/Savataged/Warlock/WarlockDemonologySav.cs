@@ -174,7 +174,7 @@ namespace ReBot
 				return;
 			if (	DefensiveCoolDowns() == true )
 				return;
-			if ( 	PetManagement == true )
+			if ( 	PetManagement() == true )
 				return;
 			if (	DamageRoutine() == true )
 				return;
