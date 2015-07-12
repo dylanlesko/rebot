@@ -112,30 +112,30 @@ namespace ReBot
 				
 			string spell = null;
 
-            if (pet == WarlockPet.AutoSelect)
+           // if (pet == WarlockPet.AutoSelect)
 				if ( HasSpell("Demonic Servitude") == true )
 				{
-                    pet = WarlockPet.Infernal;
+                    //pet = WarlockPet.Infernal;
 					spell = "Summon Doomguard";
 				}
 				else if ( HasSpell("Summon Felguard") == true )
 				{
-                    pet = WarlockPet.Felguard;
+                    //pet = WarlockPet.Felguard;
 					spell = "Summon Felguard";
 				}
                 else if ( HasSpell("Summon Felhunter") == true )
 				{
-                    pet = WarlockPet.Felhunter;
+                   // pet = WarlockPet.Felhunter;
 					spell = "Summon Felhunter";
                 }
                 else if (  HasSpell("Summon Voidwalker") == true )
 				{
-                    pet = WarlockPet.Voidwalker;
+                    //pet = WarlockPet.Voidwalker;
 					spell = "Summon Voidwalker";
 				}
                 else if ( HasSpell("Summon Imp") == true )
 				{
-                    pet = WarlockPet.SoulImp;
+                    //pet = WarlockPet.SoulImp;
 					spell = "Summon Imp";
 				}
                 else
