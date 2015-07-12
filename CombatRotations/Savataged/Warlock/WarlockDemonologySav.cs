@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using ReBot.API;
 using System.ComponentModel;
 using Geometry;
+using Newtonsoft.Json.Converters;
+
 
     public enum WarlockPet
     {
@@ -83,6 +85,7 @@ namespace ReBot
 				if (	CastSelf("Dark Intent", 
 						() => HasAura("Dark Intent") ) == true )
 					return true;
+			return false;
 		}
 		
 		public bool PetManagement()
