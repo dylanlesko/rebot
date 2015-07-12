@@ -21,7 +21,7 @@ Rebot
 | Priest       |              |        |        |        |
 | Rogue        |              |        |        |        |
 | Shaman       | Implementing |   Enh  |        |        |
-| Warlock      |              |        |        |        |
+| Warlock      | Implementing |  Demo  |        |        |
 | Warrior      |              |        |        |        |
 
 ###Profiles
