@@ -163,7 +163,7 @@ namespace ReBot
 				return true;
 			
 			if (	HasSpell("Create Helathstone" ) == true )
-				if ( 	CastSelfPreventDouble("Create Healthstone", 
+				if ( 	CastPreventDouble("Create Healthstone", 
 						() => Inventory.Healthstone == null,
 						10000 ) == true )
 					return true;
@@ -180,6 +180,8 @@ namespace ReBot
 			if (	DefensiveCoolDowns() == true )
 				return;
 			if ( 	PetManagement() == true )
+				return;
+			if (	Metamorphosis() == true )
 				return;
 			if (	DamageRoutine() == true )
 				return;
