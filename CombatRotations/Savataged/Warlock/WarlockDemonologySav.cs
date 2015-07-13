@@ -234,6 +234,7 @@ namespace ReBot
 		{
 			if (	HasSpell("Metamorphosis") == true )
 				if (	HasAura("Metamorphosis") == true )
+				{
 					if (	Me.GetPower(WoWPowerType.WarlockDemonicFury) < 750 )
 						if (	HasSpell("Dark Soul: Knowledge") == true )
 							if (	CastSelf("Metamorphosis",
@@ -243,11 +244,12 @@ namespace ReBot
 								return false;
 						else
 							if (	CastSelf("Metamorphosis") == true )
-								return true;			
+								return true;	
+				}								
 				else
 				    if (	CastSelf("Metamorphosis", 
 							() => Me.GetPower(WoWPowerType.WarlockDemonicFury) >= 900)) 
-					return true;
+						return true;
 			return false;
 		}
 		
